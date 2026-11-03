@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24513e">
+  <meta name="description" content="Explore as 19 referências coloridas de O Natal que Pintamos Juntos, de Eliane Tomás. Amplie, baixe e inspire novas memórias em família.">
+  <meta name="author" content="Eliane Tomás">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="O Natal que Pintamos Juntos">
+  <meta property="og:title" content="Um Natal com as suas cores">
+  <meta property="og:description" content="O guia de referências coloridas do livro de Eliane Tomás. Uma inspiração para colorir e criar memórias em família.">
+  <meta name="twitter:card" content="summary_large_image">
+  {{PUBLIC_METADATA}}
+  <title>Referências coloridas | O Natal que Pintamos Juntos</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" href="assets/fonts/Fredoka-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#referencias">Pular para as ilustrações</a>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="O Natal que Pintamos Juntos — início">
+      <img src="favicon.png" alt="" width="44" height="44">
+      <span>O Natal que<br><strong>Pintamos Juntos</strong></span>
+    </a>
+    <a class="header-link" href="#referencias">Ver ilustrações <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> GUIA COLORIDO DO LIVRO</p>
+        <h1 id="hero-title">Um Natal com<br>as <em>suas cores.</em></h1>
+        <p class="hero-intro">Um pouquinho de inspiração para continuar a história de Clara, Theo e sua família — agora do seu jeito.</p>
+        <a class="button primary" href="#referencias">Explorar as 19 cenas <span aria-hidden="true">↓</span></a>
+        <p class="hero-credit">Uma história de <strong>Eliane Tomás</strong></p>
+      </div>
+      <div class="hero-picture">
+        <div class="cover-wrap"><img class="book-cover" src="assets/capa.jpg" alt="Capa de O Natal que Pintamos Juntos: Clara e Theo com a estrela feita em família, os pais, os avós e Pipoca." width="800" height="1035" fetchpriority="high"></div>
+        <span class="picture-note">Histórias, afeto<br>e muitas cores.</span>
+      </div>
+    </section>
+
+    <aside class="freedom-note" aria-label="Um convite à criatividade">
+      <span class="note-star" aria-hidden="true">✧</span>
+      <div><h2>Uma inspiração, não uma regra.</h2><p>As cores daqui são apenas sugestões. Você pode inventar outras combinações: a lembrança é sua, e as cores também!</p></div>
+    </aside>
+
+    <section class="gallery-section" id="referencias" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">CENA POR CENA, UMA DESCOBERTA</p><h2 id="gallery-title">Encontre a sua página</h2></div>
+        <p>Escolha uma cena para ampliar.<br>O número da página ajuda a encontrá-la no livro.</p>
+      </div>
+      <nav class="scene-navigation" aria-label="Ir direto a uma cena">
+        <label for="scene-select">Ir para a cena</label>
+        <select id="scene-select"><option value="">Escolha de 1 a 19</option>{{SCENE_OPTIONS}}</select>
+        <span class="reference-count">19 ilustrações para se inspirar</span>
+      </nav>
+      <div class="gallery">{{SCENE_CARDS}}</div>
+      <noscript><p class="noscript-note">Você também pode abrir cada referência pelo botão “Ampliar ilustração”. O download funciona sem JavaScript.</p></noscript>
+    </section>
+
+    <section class="closing-note" aria-labelledby="closing-title">
+      <span aria-hidden="true">✦</span>
+      <h2 id="closing-title">O mais bonito é criar juntos.</h2>
+      <p>Separe os lápis de cor ou o giz de cera, chame alguém especial e aproveite esse momento. Não precisa ficar perfeito para virar uma boa lembrança.</p>
+      <a href="#inicio" class="text-link">Voltar ao início <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>O Natal que Pintamos Juntos</strong><p>Uma história para ler, imaginar, colorir e criar memórias em família.</p></div>
+    <p class="author-credit">Eliane Tomás<br><span>Guia de referências coloridas do livro</span></p>
+  </footer>
+
+  <dialog id="image-viewer" class="viewer" aria-labelledby="viewer-title" aria-describedby="viewer-hint">
+    <div class="viewer-shell">
+      <header class="viewer-header">
+        <div><span id="viewer-counter" class="eyebrow"></span><h2 id="viewer-title"></h2></div>
+        <button class="icon-button close-viewer" type="button" aria-label="Fechar ilustração ampliada" autofocus>×</button>
+      </header>
+      <div class="viewer-stage"><img id="viewer-image" alt="" width="1632" height="2176"></div>
+      <div class="viewer-toolbar">
+        <button id="previous-scene" class="button secondary" type="button"><span aria-hidden="true">←</span> Anterior</button>
+        <span id="viewer-page"></span>
+        <button id="next-scene" class="button secondary" type="button">Próxima <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="viewer-downloads"><a id="viewer-download" class="button primary" download>Baixar referência <span aria-hidden="true">↓</span></a><a id="viewer-original" class="text-link" target="_blank" rel="noopener">Abrir imagem original <span aria-hidden="true">↗</span></a></div>
+      <p id="viewer-hint">Use as setas do teclado para trocar de cena e Esc para fechar. No celular, abra a imagem original para ampliar com os dedos.</p>
+    </div>
+  </dialog>
+</body>
+</html>

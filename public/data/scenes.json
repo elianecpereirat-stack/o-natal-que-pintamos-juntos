@@ -1,0 +1,211 @@
+[
+  {
+    "number": 1,
+    "title": "O convite para uma noite especial",
+    "page": 5,
+    "thumbnail": "assets/thumbs/cena-01.webp",
+    "image": "assets/scenes/cena-01.webp",
+    "download": "assets/downloads/cena-01.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-01.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 2,
+    "title": "O grande plano de Clara",
+    "page": 7,
+    "thumbnail": "assets/thumbs/cena-02.webp",
+    "image": "assets/scenes/cena-02.webp",
+    "download": "assets/downloads/cena-02.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-02.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 3,
+    "title": "Cada um ajuda de um jeito",
+    "page": 9,
+    "thumbnail": "assets/thumbs/cena-03.webp",
+    "image": "assets/scenes/cena-03.webp",
+    "download": "assets/downloads/cena-03.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-03.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 4,
+    "title": "Uma receita cheia de carinho",
+    "page": 11,
+    "thumbnail": "assets/thumbs/cena-04.webp",
+    "image": "assets/scenes/cena-04.webp",
+    "download": "assets/downloads/cena-04.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-04.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 5,
+    "title": "O segredo da estrela",
+    "page": 13,
+    "thumbnail": "assets/thumbs/cena-05.webp",
+    "image": "assets/scenes/cena-05.webp",
+    "download": "assets/downloads/cena-05.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-05.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 6,
+    "title": "A estrela feita à mão",
+    "page": 15,
+    "thumbnail": "assets/thumbs/cena-06.webp",
+    "image": "assets/scenes/cena-06.webp",
+    "download": "assets/downloads/cena-06.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-06.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 7,
+    "title": "Ops! Cadê a estrela?",
+    "page": 17,
+    "thumbnail": "assets/thumbs/cena-07.webp",
+    "image": "assets/scenes/cena-07.webp",
+    "download": "assets/downloads/cena-07.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-07.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 8,
+    "title": "As pistas de Pipoca",
+    "page": 19,
+    "thumbnail": "assets/thumbs/cena-08.webp",
+    "image": "assets/scenes/cena-08.webp",
+    "download": "assets/downloads/cena-08.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-08.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 9,
+    "title": "A caixa das lembranças",
+    "page": 21,
+    "thumbnail": "assets/thumbs/cena-09.webp",
+    "image": "assets/scenes/cena-09.webp",
+    "download": "assets/downloads/cena-09.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-09.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 10,
+    "title": "Histórias que moram nas coisas",
+    "page": 23,
+    "thumbnail": "assets/thumbs/cena-10.webp",
+    "image": "assets/scenes/cena-10.webp",
+    "download": "assets/downloads/cena-10.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-10.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 11,
+    "title": "Uma ideia brilhante",
+    "page": 25,
+    "thumbnail": "assets/thumbs/cena-11.webp",
+    "image": "assets/scenes/cena-11.webp",
+    "download": "assets/downloads/cena-11.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-11.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 12,
+    "title": "Uma estrela de muitas mãos",
+    "page": 27,
+    "thumbnail": "assets/thumbs/cena-12.webp",
+    "image": "assets/scenes/cena-12.webp",
+    "download": "assets/downloads/cena-12.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-12.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 13,
+    "title": "Um lugar para todos",
+    "page": 29,
+    "thumbnail": "assets/thumbs/cena-13.webp",
+    "image": "assets/scenes/cena-13.webp",
+    "download": "assets/downloads/cena-13.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-13.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 14,
+    "title": "O presente mais criativo",
+    "page": 31,
+    "thumbnail": "assets/thumbs/cena-14.webp",
+    "image": "assets/scenes/cena-14.webp",
+    "download": "assets/downloads/cena-14.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-14.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 15,
+    "title": "O verdadeiro sentido do Natal",
+    "page": 33,
+    "thumbnail": "assets/thumbs/cena-15.webp",
+    "image": "assets/scenes/cena-15.webp",
+    "download": "assets/downloads/cena-15.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-15.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 16,
+    "title": "A estrela encontra seu lugar",
+    "page": 35,
+    "thumbnail": "assets/thumbs/cena-16.webp",
+    "image": "assets/scenes/cena-16.webp",
+    "download": "assets/downloads/cena-16.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-16.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 17,
+    "title": "A ceia de muitos sorrisos",
+    "page": 37,
+    "thumbnail": "assets/thumbs/cena-17.webp",
+    "image": "assets/scenes/cena-17.webp",
+    "download": "assets/downloads/cena-17.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-17.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 18,
+    "title": "Uma lembrança para guardar",
+    "page": 39,
+    "thumbnail": "assets/thumbs/cena-18.webp",
+    "image": "assets/scenes/cena-18.webp",
+    "download": "assets/downloads/cena-18.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-18.png",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "number": 19,
+    "title": "O Natal que ficou no coração",
+    "page": 41,
+    "thumbnail": "assets/thumbs/cena-19.webp",
+    "image": "assets/scenes/cena-19.webp",
+    "download": "assets/downloads/cena-19.png",
+    "filename": "O-Natal-que-Pintamos-Juntos-cena-19.png",
+    "width": 1200,
+    "height": 1600
+  }
+]
