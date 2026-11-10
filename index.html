@@ -12,13 +12,33 @@
   <meta property="og:description" content="Uma história de Natal para ler em família, com ilustrações para colorir e espaço para a criança desenhar sua própria memória.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/">
+  <link rel="alternate" hreflang="pt-BR" href="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/">
+  <link rel="alternate" hreflang="en-US" href="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/en/">
+  <link rel="alternate" hreflang="x-default" href="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/">
   <meta property="og:url" content="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/">
   <meta property="og:image" content="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/assets/capa.jpg">
-  <meta property="og:image:alt" content="Capa de O Natal que Pintamos Juntos, de Eliane Tomás">
+  <meta property="og:image:alt" content="Capa de O Natal que Pintamos Juntos, de Eliane Tomás.">
   <meta name="twitter:title" content="O Natal que Pintamos Juntos | Eliane Tomás">
-  <meta name="twitter:description" content="Uma história de Natal para ler em família, com ilustrações para colorir e espaço para criar uma memória própria.">
+  <meta name="twitter:description" content="Uma história de Natal para ler em família, com ilustrações para colorir e espaço para a criança desenhar sua própria memória.">
   <meta name="twitter:image" content="https://elianecpereirat-stack.github.io/o-natal-que-pintamos-juntos/assets/capa.jpg">
   <title>O Natal que Pintamos Juntos | Eliane Tomás</title>
+  <script>
+  (() => {
+    const key = 'natal-page-language';
+    const readSaved = () => { try { return localStorage.getItem(key); } catch (_) { return null; } };
+    const save = value => { try { localStorage.setItem(key, value); } catch (_) {} };
+    const requested = new URLSearchParams(window.location.search).get('lang');
+    if (requested === 'pt' || requested === 'en') save(requested);
+    const saved = readSaved();
+    const languages = Array.from(navigator.languages || []);
+    if (!languages.length && navigator.language) languages.push(navigator.language);
+    const firstSupported = languages.find(value => /^(en|pt)(-|$)/i.test(value)) || '';
+    const browserLanguage = /^en(-|$)/i.test(firstSupported) ? 'en' : 'pt';
+    const selected = requested === 'pt' || requested === 'en' ? requested :
+      (saved === 'pt' || saved === 'en' ? saved : browserLanguage);
+    if (selected === 'en') window.location.replace(new URL('en/', window.location.href).href);
+  })();
+</script>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preload" href="assets/fonts/Fredoka-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="site.css?v=20261110">
@@ -31,7 +51,12 @@
       <img src="favicon.png" alt="" width="44" height="44">
       <span>O Natal que<br><strong>Pintamos Juntos</strong></span>
     </a>
-    <a class="header-link" href="#referencias">Ver ilustrações <span aria-hidden="true">↗</span></a>
+    <div class="header-actions">
+      <a class="header-link" href="#referencias">Ver ilustrações <span aria-hidden="true">↗</span></a>
+      <nav class="language-switch" aria-label="Selecionar idioma">
+        <a class="is-active" href="./?lang=pt" lang="pt-BR" aria-current="page">PT</a><span aria-hidden="true">/</span><a href="en/?lang=en" lang="en-US">EN</a>
+      </nav>
+    </div>
   </header>
 
   <main id="inicio">
