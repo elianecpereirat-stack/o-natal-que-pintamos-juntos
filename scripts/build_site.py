@@ -61,8 +61,8 @@ def build():
   <meta property="og:url" content="{escape(site_url)}">
   <meta property="og:image" content="{escape(image_url)}">
   <meta property="og:image:alt" content="Capa de O Natal que Pintamos Juntos, de Eliane Tomás">
-  <meta name="twitter:title" content="Um Natal com as suas cores">
-  <meta name="twitter:description" content="As 19 referências coloridas do livro de Eliane Tomás.">
+  <meta name="twitter:title" content="O Natal que Pintamos Juntos | Eliane Tomás">
+  <meta name="twitter:description" content="Uma história de Natal para ler em família, com ilustrações para colorir e espaço para criar uma memória própria.">
   <meta name="twitter:image" content="{escape(image_url)}">'''
         (PUBLIC / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{escape(site_url)}</loc></url></urlset>\n')
     source = (ROOT / 'templates/index.html').read_text(encoding='utf-8')
@@ -71,7 +71,7 @@ def build():
         raise ValueError('Unresolved template marker')
     (PUBLIC / 'index.html').write_text(output, encoding='utf-8')
     (PUBLIC / '.nojekyll').touch()
-    (PUBLIC / 'manus-routes.json').write_text(json.dumps({'routes': [{'path': '/', 'title': 'Referências coloridas — O Natal que Pintamos Juntos'}]}, ensure_ascii=False) + '\n')
+    (PUBLIC / 'manus-routes.json').write_text(json.dumps({'routes': [{'path': '/', 'title': 'O Natal que Pintamos Juntos — Eliane Tomás'}]}, ensure_ascii=False) + '\n')
     print(f'Generated public/index.html: {len(scenes)} scenes; public URL: {site_url or "not configured"}')
 
 if __name__ == '__main__':

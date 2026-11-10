@@ -70,4 +70,38 @@
     target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
     target.querySelector('.scene-image-link').focus({ preventScroll: true });
   });
+
+  const shareButton = document.querySelector('#share-page');
+  const shareStatus = document.querySelector('#share-status');
+  if (shareButton && shareStatus) {
+    const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+    const shareData = {
+      title: document.title,
+      text: 'Uma história de Natal para ler, imaginar, colorir e criar memórias em família.',
+      url: canonicalUrl,
+    };
+
+    async function copyPageLink() {
+      try {
+        await navigator.clipboard.writeText(canonicalUrl);
+        shareStatus.textContent = 'Link copiado. Agora você pode enviá-lo para quem quiser.';
+      } catch {
+        window.prompt('Copie o link para compartilhar esta página:', canonicalUrl);
+        shareStatus.textContent = 'Você pode copiar o link e enviá-lo a alguém especial.';
+      }
+    }
+
+    shareButton.addEventListener('click', async () => {
+      shareStatus.textContent = '';
+      if (typeof navigator.share === 'function') {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error?.name === 'AbortError') return;
+        }
+      }
+      await copyPageLink();
+    });
+  }
 })();
