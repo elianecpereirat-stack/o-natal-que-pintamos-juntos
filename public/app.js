@@ -7,6 +7,7 @@
   const previousButton = document.querySelector('#previous-scene');
   const nextButton = document.querySelector('#next-scene');
   const image = document.querySelector('#viewer-image');
+  const english = document.documentElement.lang.toLowerCase().startsWith('en');
   let activeIndex = 0;
   let opener = null;
 
@@ -18,8 +19,12 @@
     const link = card.querySelector('.scene-image-link');
     const download = card.querySelector('.download-link');
     document.querySelector('#viewer-title').textContent = title;
-    document.querySelector('#viewer-counter').textContent = `CENA ${index + 1} DE ${cards.length}`;
-    document.querySelector('#viewer-page').textContent = `Página ${card.dataset.page} do livro`;
+    document.querySelector('#viewer-counter').textContent = english
+      ? `SCENE ${index + 1} OF ${cards.length}`
+      : `CENA ${index + 1} DE ${cards.length}`;
+    document.querySelector('#viewer-page').textContent = english
+      ? `Page ${card.dataset.page} in the book`
+      : `Página ${card.dataset.page} do livro`;
     image.src = link.href;
     image.alt = link.querySelector('img').alt;
     image.width = Number(card.dataset.width);
@@ -77,17 +82,27 @@
     const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
     const shareData = {
       title: document.title,
-      text: 'Uma história de Natal para ler, imaginar, colorir e criar memórias em família.',
+      text: english
+        ? 'A Christmas story to read, imagine, color, and make family memories together.'
+        : 'Uma história de Natal para ler, imaginar, colorir e criar memórias em família.',
       url: canonicalUrl,
     };
 
     async function copyPageLink() {
       try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
         await navigator.clipboard.writeText(canonicalUrl);
-        shareStatus.textContent = 'Link copiado. Agora você pode enviá-lo para quem quiser.';
+        shareStatus.textContent = english
+          ? 'Link copied. You can now send it to someone.'
+          : 'Link copiado. Agora você pode enviá-lo para quem quiser.';
       } catch {
-        window.prompt('Copie o link para compartilhar esta página:', canonicalUrl);
-        shareStatus.textContent = 'Você pode copiar o link e enviá-lo a alguém especial.';
+        window.prompt(
+          english ? 'Copy this link to share the page:' : 'Copie o link para compartilhar esta página:',
+          canonicalUrl,
+        );
+        shareStatus.textContent = english
+          ? 'You can copy the link and send it to someone special.'
+          : 'Você pode copiar o link e enviá-lo a alguém especial.';
       }
     }
 

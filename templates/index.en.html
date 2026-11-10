@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24513e">
+  <meta name="description" content="Meet The Christmas We Painted Together, by Eliane Tomás: a family Christmas story with illustrations to color and a page for each child to draw a Christmas memory.">
+  <meta name="author" content="Eliane Tomás">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Christmas We Painted Together">
+  <meta property="og:title" content="The Christmas We Painted Together | Eliane Tomás">
+  <meta property="og:description" content="A Christmas story to read together, with illustrations to color and a final page for children to draw their own holiday memory.">
+  <meta name="twitter:card" content="summary_large_image">
+  {{PUBLIC_METADATA}}
+  <title>The Christmas We Painted Together | Eliane Tomás</title>
+  {{LANGUAGE_SCRIPT}}
+  <link rel="icon" type="image/png" href="{{ASSET_PREFIX}}favicon.png">
+  <link rel="preload" href="{{ASSET_PREFIX}}assets/fonts/Fredoka-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="{{ASSET_PREFIX}}site.css?v=20261110">
+  <script src="{{ASSET_PREFIX}}app.js?v=20261110" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#referencias">Skip to the illustrations</a>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="The Christmas We Painted Together — home">
+      <img src="{{ASSET_PREFIX}}favicon.png" alt="" width="44" height="44">
+      <span>The Christmas We<br><strong>Painted Together</strong></span>
+    </a>
+    <div class="header-actions">
+      <a class="header-link" href="#referencias">View illustrations <span aria-hidden="true">↗</span></a>
+      {{LANGUAGE_SWITCH}}
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> COLORING GUIDE</p>
+        <h1 id="hero-title">A Christmas in<br><em>your colors.</em></h1>
+        <p class="hero-intro">A little inspiration to continue the story of Clara, Theo, and their family—now in your own colors.</p>
+        <p class="book-context">The illustrations to color and the final drawing page invite each child to create their own Christmas memory.</p>
+        <a class="button primary" href="#referencias">Explore all 19 scenes <span aria-hidden="true">↓</span></a>
+        {{ENGLISH_BUY_LINK_TOP}}
+        <p class="hero-credit">A story by <strong>Eliane Tomás</strong></p>
+      </div>
+      <div class="hero-picture">
+        <div class="cover-wrap"><img class="book-cover" src="{{ASSET_PREFIX}}assets/capa.jpg" alt="Cover art from the original Portuguese edition, showing Clara and Theo with their family gathered around a handmade star." width="800" height="1035" fetchpriority="high"></div>
+        <span class="picture-note">Stories, love<br>and color.</span>
+      </div>
+    </section>
+
+    <aside class="freedom-note" aria-label="An invitation to be creative">
+      <span class="note-star" aria-hidden="true">✧</span>
+      <div><h2>Inspiration, not a rule.</h2><p>The colors here are only suggestions. Make up your own combinations: the memory is yours, and so are the colors!</p></div>
+    </aside>
+
+    <section class="gallery-section" id="referencias" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">SCENE BY SCENE, A NEW DISCOVERY</p><h2 id="gallery-title">Find your page</h2></div>
+        <p>Choose a scene to enlarge.<br>Use the page number to find it in the book.</p>
+      </div>
+      <nav class="scene-navigation" aria-label="Jump to a scene">
+        <label for="scene-select">Go to a scene</label>
+        <select id="scene-select"><option value="">Choose from 1 to 19</option>{{SCENE_OPTIONS}}</select>
+        <span class="reference-count">19 illustrations to inspire you</span>
+      </nav>
+      <div class="gallery">{{SCENE_CARDS}}</div>
+      <noscript><p class="noscript-note">You can open each reference using its “Enlarge” link. Downloads work without JavaScript.</p></noscript>
+    </section>
+
+    <section class="closing-note" aria-labelledby="closing-title">
+      <span aria-hidden="true">✦</span>
+      <h2 id="closing-title">The best part is making it together.</h2>
+      <p>Get out the colored pencils or crayons, invite someone special, and enjoy the moment. It doesn't have to be perfect to become a cherished memory.</p>
+      <p class="share-invitation">If someone came to mind as you explored this page, they might enjoy discovering the story, too.</p>
+      <div class="closing-actions">
+        {{ENGLISH_BUY_LINK_BOTTOM}}
+        <button class="button secondary share-button" id="share-page" type="button" aria-describedby="share-status">Share this page <span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+      <a href="#inicio" class="text-link">Back to the top <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>The Christmas We Painted Together</strong><p>A story to read, imagine, color, and make memories together.</p></div>
+    <p class="author-credit">Eliane Tomás<br><span>Coloring guide for the book</span></p>
+  </footer>
+
+  <dialog id="image-viewer" class="viewer" aria-labelledby="viewer-title" aria-describedby="viewer-hint">
+    <div class="viewer-shell">
+      <header class="viewer-header">
+        <div><span id="viewer-counter" class="eyebrow"></span><h2 id="viewer-title"></h2></div>
+        <button class="icon-button close-viewer" type="button" aria-label="Close enlarged illustration" autofocus>×</button>
+      </header>
+      <div class="viewer-stage"><img id="viewer-image" alt="" width="1632" height="2176"></div>
+      <div class="viewer-toolbar">
+        <button id="previous-scene" class="button secondary" type="button"><span aria-hidden="true">←</span> Previous</button>
+        <span id="viewer-page"></span>
+        <button id="next-scene" class="button secondary" type="button">Next <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="viewer-downloads"><a id="viewer-download" class="button primary" download>Download reference <span aria-hidden="true">↓</span></a><a id="viewer-original" class="text-link" target="_blank" rel="noopener">Open full-size image <span aria-hidden="true">↗</span></a></div>
+      <p id="viewer-hint">Use the arrow keys to move between scenes and Esc to close. On a phone, open the original image to zoom in.</p>
+    </div>
+  </dialog>
+</body>
+</html>
